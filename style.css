@@ -1,0 +1,300 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+:root {
+    font-size: clamp(0.6rem, 0.65vw, 0.8rem);
+}
+
+body {
+    /* min-height: 100vh; */
+    /* font-size: 0.7vw; */
+    height: auto;
+}
+
+.background {
+    height: 100%;
+    min-height: 100vh;
+    /* padding-bottom: 5rem; */
+    background-color: rgb(101, 101, 101);
+
+
+
+
+    background-image: url('https://picsum.photos/1920/1080');
+
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.signUpBoard {
+    width: 80rem;
+    height: auto;
+    margin: 10rem auto 9em;
+    background-color: rgb(196, 196, 196);
+    border-radius: 2rem;
+    overflow: hidden;
+
+
+
+
+
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 關鍵1: 設為半透明白色 */
+    backdrop-filter: blur(10px);
+    /* 關鍵2: 讓背景霧化 10px */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* 加上半透明邊框，增加質感 */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    height: 1rem;
+}
+
+.board_header {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(196, 196, 196); */
+    padding: 1.5rem 3rem;
+}
+.board_header >*{
+    display:none;
+}
+
+
+.board_body {
+    display: flex;
+    gap: 10rem;
+
+    padding: 0.5rem 6rem 4rem;
+}
+
+.board_body_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5rem;
+    /* background-color: rgb(196, 196, 196); */
+    /* padding: 3rem 0rem; */
+
+    flex-basis: 0;
+    flex-grow: 2;
+
+
+    position: relative;
+}
+
+.board_body_left h1{
+    font-size: 4rem;
+    white-space: nowrap;
+    overflow:visible;
+    text-align: center;
+    color: #644b00;
+}
+
+.board_body_left::after {
+    /* content: ""; */
+
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -1.5px;
+    width: 3px;
+    border-radius: 3px;
+
+    background-color: rgb(196, 196, 196);
+
+
+}
+
+/* .board_body_left img {
+    background-color: rgb(196, 196, 196);
+} */
+
+.board_body_right {
+    flex-basis: 0;
+    flex-grow: 3;
+    min-width: 0;
+    /* padding: 2rem 6rem; */
+}
+
+
+
+/* .form>*:nth-child(n) {
+    margin: 2rem 0;
+
+    background-color: yellowgreen;
+} */
+
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.form h1{
+    color: #efefef;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.form .form_items_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.form .form_item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form .sec_line {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.sec_line .form_item:first-child {
+    flex-grow: 3;
+    flex-shrink: 3;
+    min-width: 0;
+}
+
+.sec_line .form_item:last-child {
+    flex-grow: 5;
+    flex-shrink: 5;
+    min-width: 0;
+}
+
+.form_item {
+    position: relative;
+}
+
+.form_item input {
+    background-color: #efefef;
+    height: 4rem;
+    padding: 0rem 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    /* box-shadow: inset 0.5rem 0.5rem 1rem #9a9a9a; */
+
+    z-index: 1;
+
+    outline: none;
+
+
+
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 關鍵1: 設為半透明白色 */
+    backdrop-filter: blur(10px);
+    /* 關鍵2: 讓背景霧化 10px */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* 加上半透明邊框，增加質感 */
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form_item span {
+    position: absolute;
+    bottom: 0.85rem;
+    left: 1.5rem;
+    font-size: 1.4rem;
+    pointer-events: none;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.form_item input:focus {
+    box-shadow:
+        inset 0 0 0 0.3rem rgba(255, 255, 255, 0.5),
+        /* 第二層：創造 2px 寬的內縮邊框 */
+        inset 0 0 0.4rem 0.6rem rgba(150, 201, 111, 0.3);
+}
+
+.form_item input:not(:focus):not(.has-content)~span {
+    transition: transform .4s;
+}
+
+.form_item input:focus:not(.has-content)~span {
+    color: #efefef;
+    background-color: #96c96f;
+    padding: 0.4rem 1.5rem 0.4rem;
+    border-radius: 1rem 1rem 0 0;
+
+
+    background-color: rgba(150, 201, 111, 0.5);
+    /* 關鍵1: 設為半透明白色 */
+    backdrop-filter: blur(10px);
+    /* 關鍵2: 讓背景霧化 10px */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    /* 加上半透明邊框，增加質感 */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+
+
+    left: 0rem;
+    z-index: 0;
+    transform: translate(0rem, -3rem);
+    transition: transform .4s;
+}
+
+
+.has-content~span {
+    color: #efefef;
+    padding: 0.4rem 1.5rem 0.4rem;
+    border-radius: 1rem 1rem 0 0;
+
+    left: 0rem;
+    z-index: 0;
+    transform: translate(0rem, -3rem);
+    background-color: rgba(150, 201, 111, 0.5);
+}
+
+.has-content:invalid~span {
+    background-color: rgba(201, 111, 111, 0.5);
+}
+
+.has-content:invalid:focus {
+    box-shadow:
+        inset 0 0 0 0.3rem rgba(255, 255, 255, 0.5),
+        /* 第二層：創造 2px 寬的內縮邊框 */
+        inset 0 0 0.3rem 0.6rem rgba(201, 111, 111, 0.3);
+}
+
+
+
+.form button {
+    align-self: start;
+    display: block;
+    padding: 0 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem #9a9a9a;
+
+
+
+
+    background-color: rgba(114, 87, 0, 0.54);
+    /* 關鍵1: 設為半透明白色 */
+    backdrop-filter: blur(10px);
+    /* 關鍵2: 讓背景霧化 10px */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    /* 加上半透明邊框，增加質感 */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+}
