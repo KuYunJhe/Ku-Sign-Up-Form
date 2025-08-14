@@ -145,7 +145,7 @@ body {
 .form h1{
     color: #efefef;
     font-size: 4rem;
-    line-height: 5rem;
+    line-height: 7rem;
 }
 
 .form .form_items_block {
@@ -192,6 +192,9 @@ body {
     border-radius: 0.5rem;
     /* box-shadow: inset 0.5rem 0.5rem 1rem #9a9a9a; */
 
+
+    color: #644b00;
+    font-weight: 600;
     z-index: 1;
 
     outline: none;
